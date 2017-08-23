@@ -1,0 +1,33 @@
+{
+    "name": "slider",
+    "version": "0.0.1",
+    "description": "Slider JS & CSS",
+    "main": " ",
+    "scripts": {
+        "watch": "gulp watch-scripts | gulp watch-styles"
+    },
+    "keywords": [
+        "Slider"
+    ],
+    "author": "Rafael Marins",
+    "license": "ISC",
+    "devDependencies": {
+        "app-root-path": "^2.0.1",
+        "del": "^3.0.0",
+        "gulp": "^3.9.1",
+        "gulp-autoprefixer": "^4.0.0",
+        "gulp-batch": "^1.0.5",
+        "gulp-concat": "^2.6.1",
+        "gulp-inject-string": "^1.1.0",
+        "gulp-insert": "^0.5.0",
+        "gulp-rename": "^1.2.2",
+        "gulp-sass": "^3.1.0",
+        "gulp-uglify": "^3.0.0",
+        "gulp-watch": "^4.3.11",
+        "pump": "^1.0.2",
+        "require-dir": "^0.3.2",
+        "run-sequence": "^2.0.0",
+        "vinyl-ftp": "^0.6.0"
+    },
+    "dependencies": {}
+}
