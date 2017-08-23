@@ -25,7 +25,7 @@ $(document).ready(function() {
         $('.panelWrap').append(template);
     });
     var video = videos[0][0];
-    //setVideo(video);
+    setVideo(video);
 
     function setVideo(video) {
         var iframe = '<iframe src="' + video + '"></iframe>';

@@ -32,21 +32,26 @@ $(document).ready(function() {
         edgeResistance: 1,
         snap: snapStops,
         onDrag: makeEmMove,
-        onThrowUpdate: makeEmMove
+        onThrowUpdate: makeEmMove,
+        onThrowComplete: getValue,
     });
+    var previousX = 0;
+    var count = 0;
 
     function getValue() {
-        sortedX = this._targets[0]._gsTransform.x.toFixed(2)
-        console.log(sortedX / 600);
+        var index = parseInt(this.endX / parseInt(markerSpacing));
+        var video = videos[0][index];
+        setVideo(video);
+    }
+
+    function setVideo(video) {
+        var iframe = '<iframe src="' + video + '"></iframe>';
+        $('#overlay').append(iframe);
     }
 
     function makeEmMove() {
         TweenMax.set(".panelWrap", {
             x: this.x * panelStop,
-            onComplete: function() {
-                console.log(this.x * panelStop);
-            },
-            onCompleteScope: this
         });
     }
 });
